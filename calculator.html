@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Розрахунок кредиту | Tavoris Finance</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Tavoris<span>Finance</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про проект</a></li>
+                <li><a href="calculator.html">Калькулятор</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <div class="glass-card">
+            <h2>Бізнес-калькулятор</h2>
+            <p class="subtitle">Введіть параметри для миттєвого розрахунку</p>
+            
+            <div class="input-field">
+                <label>Сума кредиту (грн)</label>
+                <input type="number" id="sum" placeholder="Наприклад: 500000">
+            </div>
+
+            <div class="input-field">
+                <label>Термін (місяців)</label>
+                <input type="number" id="months" placeholder="Наприклад: 24">
+            </div>
+
+            <div class="input-field">
+                <label>Ставка (% річних)</label>
+                <input type="number" id="rate" placeholder="Наприклад: 18">
+            </div>
+
+            <button onclick="calculate()" class="cta-btn" style="width: 100%; border: none; cursor: pointer; margin-top: 20px;">Розрахувати платіж</button>
+
+            <div id="result" class="result-display" style="display: none;">
+                <div class="res-item">
+                    <span>Щомісячний платіж:</span>
+                    <strong id="out-monthly">0</strong> <small>грн</small>
+                </div>
+                <div class="res-item">
+                    <span>Загальна переплата:</span>
+                    <strong id="out-over">0</strong> <small>грн</small>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Виконавець: Пащенко Денис | Група: ФЕМП4-11</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
